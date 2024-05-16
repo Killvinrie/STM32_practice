@@ -2,12 +2,17 @@
 #define __BSP_LED_H
 
 #include "stm32f10x.h"
-#include <stm32f10x_gpio.h>
-#include "stm32f10x_rcc.h"
 
+
+
+#define LED_GPIO    GPIOB
 #define LED_R_PIN   GPIO_Pin_5
 #define LED_G_PIN   GPIO_Pin_0
 #define LED_B_PIN   GPIO_Pin_1
+
+#define LED_R_ON    LED_GPIO->BRR = GPIO_Pin_5
+#define LED_G_ON    LED_GPIO->BRR = GPIO_Pin_0
+#define LED_B_ON    LED_GPIO->BRR = GPIO_Pin_1
 
 enum LED_PIN
 {
