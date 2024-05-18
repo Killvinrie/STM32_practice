@@ -30,3 +30,4 @@
 .\objects\main.o: ..\libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\objects\main.o: ..\User\led\bsp_led.h
 .\objects\main.o: ..\User\key\bsp_key.h
+.\objects\main.o: ..\User\clock\bsp_clk.h

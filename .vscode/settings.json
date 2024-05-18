@@ -5,7 +5,8 @@
         "stm32f10x_rcc.h": "c",
         "stm32f10x.h": "c",
         "bsp_key.h": "c",
-        "stm32f10x_conf.h": "c"
+        "stm32f10x_conf.h": "c",
+        "bsp_clk.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
