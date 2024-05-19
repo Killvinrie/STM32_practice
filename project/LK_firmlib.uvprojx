@@ -369,7 +369,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_HD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\libraries\STM32F10x_StdPeriph_Driver\inc;..\User;..\libraries\CMSIS;..\User\led;..\User\key;..\User\clock</IncludePath>
+              <IncludePath>..\libraries\STM32F10x_StdPeriph_Driver\inc;..\User;..\libraries\CMSIS;..\User\led;..\User\key;..\User\clock;..\User\exti</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -581,6 +581,11 @@
               <FileName>bsp_clk.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\clock\bsp_clk.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\exti\bsp_exti.c</FilePath>
             </File>
           </Files>
         </Group>

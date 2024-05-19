@@ -3,7 +3,7 @@
 
 #include"stm32f10x.h"
 
-void clk_config(uint32_t pllmul);
+void RCC_CLK_config(uint32_t pllmul);
 
 
 

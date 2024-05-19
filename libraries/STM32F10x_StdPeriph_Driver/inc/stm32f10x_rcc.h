@@ -595,7 +595,7 @@ typedef struct
 #define RCC_FLAG_HSIRDY                  ((uint8_t)0x21)
 #define RCC_FLAG_HSERDY                  ((uint8_t)0x31)
 #define RCC_FLAG_PLLRDY                  ((uint8_t)0x39)
-#define RCC_FLAG_LSERDY                  ((uint8_t)0x41)
+#define RCC_FLAG_LSERDY                  ((uint8_t)0x41 )
 #define RCC_FLAG_LSIRDY                  ((uint8_t)0x61)
 #define RCC_FLAG_PINRST                  ((uint8_t)0x7A)
 #define RCC_FLAG_PORRST                  ((uint8_t)0x7B)

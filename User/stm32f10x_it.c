@@ -23,6 +23,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
+#include "bsp_led.h"
 
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
@@ -134,6 +135,15 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
+}
+
+void EXTI0_IRQHandler(void)
+{
+    if(EXTI_GetITStatus(EXTI_Line0) == 1 )
+    {
+      LED_GPIO->ODR ^= GPIO_Pin_0;
+    }
+    EXTI_ClearITPendingBit(EXTI_Line0);
 }
 
 /******************************************************************************/

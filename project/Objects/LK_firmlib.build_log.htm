@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.14.5.0
  
 <h2>Project:</h2>
 C:\Users\Kevin-Rie\Desktop\stm32_LK\Flib-Template\project\LK_firmlib.uvprojx
-Project File Date:  05/16/2024
+Project File Date:  05/19/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.05 update 2 (build 169)', folder: 'D:\KEIL5\ARM\ARMCC\Bin'
@@ -58,9 +58,9 @@ compiling main.c...
   #endif
 ..\User\clock\bsp_clk.h(11): warning:  #1-D: last line of file ends without a newline
   #endif
-..\User\main.c(15): warning:  #223-D: function "RCC_CLK_config" declared implicitly
-        RCC_CLK_config(RCC_PLLMul_16);
-..\User\main.c(59): warning:  #1-D: last line of file ends without a newline
+..\User\exti\bsp_exti.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\User\main.c(61): warning:  #1-D: last line of file ends without a newline
   }
 ..\User\main.c: 4 warnings, 0 errors
 compiling stm32f10x_it.c...
@@ -77,10 +77,14 @@ compiling bsp_clk.c...
 ..\User\clock\bsp_clk.c(30): warning:  #1-D: last line of file ends without a newline
   }
 ..\User\clock\bsp_clk.c: 2 warnings, 0 errors
+compiling bsp_exti.c...
+..\User\exti\bsp_exti.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\User\exti\bsp_exti.c: 1 warning, 0 errors
 linking...
-Program Size: Code=1620 RO-data=320 RW-data=0 ZI-data=1024  
+Program Size: Code=1504 RO-data=336 RW-data=8 ZI-data=1024  
 FromELF: creating hex file...
-".\Objects\LK_firmlib.axf" - 0 Error(s), 8 Warning(s).
+".\Objects\LK_firmlib.axf" - 0 Error(s), 9 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   C:\Users\Kevin-Rie\Desktop\stm32_LK\Flib-Template\project\RTE

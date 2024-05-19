@@ -19,7 +19,7 @@ void RCC_CLK_config(uint32_t pllmul)
         while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET);
 
         RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);
-        while(RCC_GetSYSCLKSource() != 0x08);
+        while(RCC_GetSYSCLKSource() != 0x08);  // wait untill the cfgr->sw  switch to pll
     }
     else
     {
