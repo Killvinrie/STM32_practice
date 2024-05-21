@@ -3,6 +3,7 @@
 #include "bsp_key.h"
 #include "bsp_clk.h"
 #include "bsp_exti.h"
+#include "bsp_systick.h"
 
 int key1 = 0;
 int key2 = 0;
@@ -16,8 +17,14 @@ int main()
 	//RCC_CLK_config(RCC_PLLMul_16);   config teh pll to output 128Mhz clock frequency.
 
 	// KEY_GPIO_CONFIG();				config the KEY1&KEY2   (GPIOA GPIOC ) to implement key check and led reverse.
-	KEY_EXTI_CONFIG();
+	//KEY_EXTI_CONFIG();
 	
+
+	while(1)
+	{
+		DelayINT_us(1000000);
+		GPIOB->ODR ^= LED_G_PIN;
+	}
 	// while (1)
 	// {
 	// 	// GPIO_SetBits(GPIOB,LED_R_PIN);
@@ -35,27 +42,27 @@ int main()
 	// 	// GPIO_ResetBits(GPIOB,LED_B_PIN);
 	// 	// delay(0xFFFFFF);
 	// }
-	while (1)
-	{	
-		key1 =GPIO_ReadInputDataBit(KEY1_GPIO,KEY1_PIN);
-		// key2 =GPIO_ReadInputDataBit(KEY2_GPIO,KEY2_PIN);
-		// if(key1 == 1)
-		// {
-		// 	delay(0xFFF);
-		// }
-		// if(key2 == 1)
-		// {
-		// 	delay(0xFFF);
-		// }
-		// if(Key_scan(KEY1_GPIO,KEY1_PIN) == KEY_ON)
-		// {
-		// 	GPIOB->ODR ^= LED_R_PIN;
-		// 	// LED1_REVERSE;
-		// }
-		// if(Key_scan(KEY2_GPIO,KEY2_PIN) == KEY_ON)
-		// {
-		// 	GPIOB->ODR ^= LED_G_PIN;
-		// }
-	}
+	// while (1)
+	// {	
+	// 	//key1 =GPIO_ReadInputDataBit(KEY1_GPIO,KEY1_PIN);
+	// 	// key2 =GPIO_ReadInputDataBit(KEY2_GPIO,KEY2_PIN);
+	// 	// if(key1 == 1)
+	// 	// {
+	// 	// 	delay(0xFFF);
+	// 	// }
+	// 	// if(key2 == 1)
+	// 	// {
+	// 	// 	delay(0xFFF);
+	// 	// }
+	// 	// if(Key_scan(KEY1_GPIO,KEY1_PIN) == KEY_ON)
+	// 	// {
+	// 	// 	GPIOB->ODR ^= LED_R_PIN;
+	// 	// 	// LED1_REVERSE;
+	// 	// }
+	// 	// if(Key_scan(KEY2_GPIO,KEY2_PIN) == KEY_ON)
+	// 	// {
+	// 	// 	GPIOB->ODR ^= LED_G_PIN;
+	// 	// }
+	// }
 	
 }
