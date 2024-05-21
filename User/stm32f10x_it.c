@@ -23,7 +23,9 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
+
 #include "bsp_led.h"
+#include "bsp_systick.h"
 
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
@@ -135,6 +137,7 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
+  Delay_Decrement();
 }
 
 void EXTI0_IRQHandler(void)

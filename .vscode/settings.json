@@ -30,7 +30,8 @@
         "stm32f10x_spi.h": "c",
         "stm32f10x_tim.h": "c",
         "stm32f10x_usart.h": "c",
-        "stm32f10x_it.h": "c"
+        "stm32f10x_it.h": "c",
+        "bsp_systick.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
