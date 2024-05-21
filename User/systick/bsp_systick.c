@@ -5,7 +5,7 @@ static volatile uint32_t delay_count;
 
 void Systick_init()
 {
-    while(SysTick_Config(SYSCLK_FREQ_72MHz/1000000));
+    while(SysTick_Config(SystemCoreClock/1000000));//  initialised to 1us 
 }
 
 void Delay_Decrement(void)
@@ -26,8 +26,8 @@ void DelayINT_us(uint32_t us)
 void Delaytick_us(uint32_t us)
 {   
     int i;
-
-    SysTick_Config(SYSCLK_FREQ_72MHz/1000000);
+    //enable the systick
+    SysTick_Config(SystemCoreClock/1000000);
     
     for(i=0;i<us;i++)
     {

@@ -19,6 +19,7 @@ int main()
 	// KEY_GPIO_CONFIG();				config the KEY1&KEY2   (GPIOA GPIOC ) to implement key check and led reverse.
 	//KEY_EXTI_CONFIG();
 	
+	Systick_init();
 
 	while(1)
 	{
