@@ -3,7 +3,7 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: µVision V5.15
+IDE-Version: ÂµVision V5.15
 Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
 License Information: L L, 7, LIC=D0D7S-L1BX5-TG27T-RA7IV-29WMN-HBGAI
  
@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.14.5.0
  
 <h2>Project:</h2>
 C:\Users\Kevin-Rie\Desktop\stm32_LK\Flib-Template\project\LK_firmlib.uvprojx
-Project File Date:  05/19/2024
+Project File Date:  05/22/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.05 update 2 (build 169)', folder: 'D:\KEIL5\ARM\ARMCC\Bin'
@@ -60,9 +60,11 @@ compiling main.c...
   #endif
 ..\User\exti\bsp_exti.h(16): warning:  #1-D: last line of file ends without a newline
   #endif
-..\User\main.c(61): warning:  #1-D: last line of file ends without a newline
+..\User\Usart\bsp_usart.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\User\main.c(67): warning:  #1-D: last line of file ends without a newline
   }
-..\User\main.c: 4 warnings, 0 errors
+..\User\main.c: 5 warnings, 0 errors
 compiling stm32f10x_it.c...
 compiling bsp_led.c...
 compiling bsp_key.c...
@@ -81,10 +83,16 @@ compiling bsp_exti.c...
 ..\User\exti\bsp_exti.h(16): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\User\exti\bsp_exti.c: 1 warning, 0 errors
+compiling bsp_usart.c...
+..\User\Usart\bsp_usart.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\User\Usart\bsp_usart.c(58): warning:  #1-D: last line of file ends without a newline
+  }
+..\User\Usart\bsp_usart.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=1504 RO-data=336 RW-data=8 ZI-data=1024  
+Program Size: Code=2012 RO-data=336 RW-data=20 ZI-data=1028  
 FromELF: creating hex file...
-".\Objects\LK_firmlib.axf" - 0 Error(s), 9 Warning(s).
+".\Objects\LK_firmlib.axf" - 0 Error(s), 12 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   C:\Users\Kevin-Rie\Desktop\stm32_LK\Flib-Template\project\RTE
