@@ -32,3 +32,4 @@
 .\objects\main.o: ..\User\key\bsp_key.h
 .\objects\main.o: ..\User\clock\bsp_clk.h
 .\objects\main.o: ..\User\exti\bsp_exti.h
+.\objects\main.o: ..\User\Usart\bsp_usart.h

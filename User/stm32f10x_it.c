@@ -25,6 +25,7 @@
 #include "stm32f10x_it.h"
 #include "bsp_led.h"
 
+
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
   */
@@ -144,6 +145,16 @@ void EXTI0_IRQHandler(void)
       LED_GPIO->ODR ^= GPIO_Pin_0;
     }
     EXTI_ClearITPendingBit(EXTI_Line0);
+}
+
+void USART1_IRQHandler(void)
+{
+  uint8_t temp_mes;
+  if(USART_GetITStatus(USART1, USART_IT_RXNE) ==SET)
+  {
+    temp_mes = USART_ReceiveData(USART1);
+    USART_SendData(USART1,temp_mes);
+  }
 }
 
 /******************************************************************************/
